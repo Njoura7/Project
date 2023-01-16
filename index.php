@@ -24,15 +24,15 @@
             <h1>CINEMA CITY</h1>
             <div class="center"><h2 class="animate-character">Let the movies carry you away</h2></div>
             
-            <p class="movies">Movies</p>
+           
    
             
 
-            <div class="flex">
+            <div class= "flex">
                 <?php
                     if ($error->type === 'db' || !isset($categories)) {
                 ?>
-                    <p>Could not load products. Please try again later.</p>
+                    <p> Could not load products. Please try again later.</p>
                 <?php
                     } else {
                         foreach ($categories as $row) {

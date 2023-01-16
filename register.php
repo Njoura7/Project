@@ -258,7 +258,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                 ?>
             </div>
-            <input type="submit" value="Register" />
+            <button class="glow-on-hover" type="submit" > Register</button>
             </div>
         </form>
     </body>

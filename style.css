@@ -175,21 +175,20 @@ h1{
   font-size: 1.75rem;
   color:rgb(7, 5, 52);
 }
-.flex{
-  /* background:rgba(94, 99, 106, 0.75); */
-  padding:1rem;
-  display:grid;
-  gap:1rem;
-  grid-auto-flow:column;
-  grid-auto-columns:25%;
+.flex { 
 
-  overflow-x: auto;
-  overscroll-behavior-inline: contain;
+  padding:1rem;
+  margin:1rem;
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;;
 
 }
 
 .flex-element{
  padding:0.5rem;
+ margin:0.5rem 1.5rem;
  border-radius:1rem;
  background-color: rgba(155, 162, 172,0.5);
 
@@ -197,7 +196,6 @@ h1{
    flex-direction: column;
    align-items: center;
    justify-content: space-evenly;
-   /* border: 5px solid red; */
  }
  .flex-element:hover{
   background-color: rgba(155, 162, 172,0.75);
@@ -208,15 +206,14 @@ h1{
  }
 .dynamic{ 
     margin:0.75rem;
-    height:350px;
-    width:250px;
+    height:320px;
+    width:220px;
     border-radius:1rem;
 }
 
 /* styling the forms */
 
 form{
-  
   
   margin:0 auto;
   width:50%;
@@ -245,13 +242,20 @@ label{
   display: flex;
   align-items: center;
   justify-content: center;
+  position:relative;
+
+}
+.book-btn{
+  position:absolute;
+  right:160px;
+  top:10px;
 }
 
 /* animated border */
 .box {
   --border-size: 0.25rem;
   --border-angle: 0turn;
-  width: 75vmin;
+  width: 78vmin;
   height: 87vmin;
   padding:1.5rem;
   margin:1.75rem 0;
@@ -290,4 +294,108 @@ label{
   background-color: rgba(134, 108, 157, 0.25);
   padding:0.75rem;
   border-radius:0.25rem;
+}
+
+/* request a movie */
+/* styling the text box */
+.card {
+  float: left;
+  position: relative;
+  background:rgb(203, 198, 225);
+  margin: 150px auto;
+  width: 650px;
+  padding: 20px;
+  box-shadow: 3px 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  border: 0;
+  z-index: 0;
+}
+.card-title, .card-description {
+color:rgb(60, 60, 118);
+}
+.card-title{
+  font-family: 'Sofia Sans Semi Condensed', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-style: italic;
+
+}
+.card-description{
+  font-family: 'Sofia Sans Semi Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 1.35rem;
+}
+.circle {
+  border-radius: 3px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  border-bottom-left-radius: 170px;
+  z-index: -1;
+}
+ 
+/* buttons styling */
+
+.glow-on-hover {
+  width: 150px;
+  height: 50px;
+  margin:1rem 0;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: rgb(69, 61, 98) !important;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(22, 26, 48,0.75);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
 }

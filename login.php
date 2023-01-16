@@ -61,7 +61,7 @@
         <div class=" box flex-element">
             
             <div>
-                <label>Username or E-mail Address</label>
+                <label> Username or E-mail Address </label>
                 <input type="text" name="username" value="<?= isset($username) ? $username : '' ?>" />
                 <?php
                     if (isset($validation) && isset($validation['username'])) {
@@ -82,7 +82,7 @@
                     }
                 ?>
             </div>
-            <input type="submit" value="Log in" />
+            <button class="glow-on-hover" type="submit" > Log in</button>
         </div>
         </form>
     </body>

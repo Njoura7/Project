@@ -60,11 +60,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <?php include_once 'includes/head.php' ?>
     <body>
     <?php include_once 'includes/nav.php' ?>
-        <p>
-            You cannot find the movie you are looking for?
-            Worry not, we can mail you when it is starts airing in our cinema.
-            Just leave your information below with name of the movie and we will get to you when we start airing the movie.
-        </p>
+
+    <div class="card">
+        <div class="title">
+      <p class="card-title">You cannot find the movie you are looking for?</p>
+      <br>
+      <p class="card-description">       Worry not, we can mail you when it is starts airing in our cinema.
+            Just leave your information below with name of the movie and we will get to you when we start airing the movie.</p>
+    </div>
+   
+  <div class="circle"></div>
+  </div>
+
+     
         <h1>REGISTER FOR A MOVIE</h1>
         <?php
             if ($success) {
@@ -119,7 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                 ?>
             </div>
-            <input type="submit" value="Request" />
+            <button class="glow-on-hover" type="submit" > Request</button>
             </div>
         </form>
     </body>

@@ -27,7 +27,9 @@
                             <img class="dynamic" src="<?= $row['url'] ?>" />
                         <p class="movie-description"><?= $row['description'] ?></p>
                     </div>
+                    <button class="glow-on-hover book-btn" type="submit" > Book Now!</button>
                 </div>
+                
         <?php
                 }
             }
