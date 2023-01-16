@@ -57,7 +57,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html>
+<?php include_once 'includes/head.php' ?>
     <body>
+    <?php include_once 'includes/nav.php' ?>
         <p>
             You cannot find the movie you are looking for?
             Worry not, we can mail you when it is starts airing in our cinema.
@@ -72,6 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         ?>
         <form method="POST">
+            <div class=" box flex-element">
             <div>
                 <label>Movie</label>
                 <input type="text" name="movie" value="<?= isset($movie) ? $movie : '' ?>" />
@@ -117,6 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ?>
             </div>
             <input type="submit" value="Request" />
+            </div>
         </form>
     </body>
 </html>

@@ -21,11 +21,11 @@
                 $post = $query->fetchAll();
                 foreach ($post as $row) {
                     ?>
-                    <div class="flex">
-                    <div class="flex-element">
+                    <div class="poster-container">
+                    <div class="box flex-element">
                         <p><?= $row['name'] ?></p>
                             <img class="dynamic" src="<?= $row['url'] ?>" />
-                        <p><?= $row['description'] ?></p>
+                        <p class="movie-description"><?= $row['description'] ?></p>
                     </div>
                 </div>
         <?php

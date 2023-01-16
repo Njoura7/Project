@@ -58,6 +58,8 @@
     <?php include_once 'includes/nav.php' ?>
         <h1>LOGIN</h1>
        <form method="POST">
+        <div class=" box flex-element">
+            
             <div>
                 <label>Username or E-mail Address</label>
                 <input type="text" name="username" value="<?= isset($username) ? $username : '' ?>" />
@@ -81,6 +83,7 @@
                 ?>
             </div>
             <input type="submit" value="Log in" />
+        </div>
         </form>
     </body>
 </html>

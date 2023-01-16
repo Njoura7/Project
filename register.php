@@ -128,6 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php include_once 'includes/nav.php' ?>
     <h1>REGISTER</h1>
     <form method="POST">
+    <div class=" box flex-element">
         <div>
             <label>Email address</label>
             <input type="text" name="email" value="<?= isset($email) ? $email : '' ?>" />
@@ -258,6 +259,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 ?>
             </div>
             <input type="submit" value="Register" />
+            </div>
         </form>
     </body>
 </html>

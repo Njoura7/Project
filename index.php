@@ -37,14 +37,14 @@
                     } else {
                         foreach ($categories as $row) {
                 ?>
-                        <div >
+                        
                             <div class="flex-element">
                                 <a href="poster.php?row_id=<?php echo $row['id'] ?>"><?= $row['name'] ?></a>
                                 <a href="poster.php?row_id=<?php echo $row['id'] ?>">
                                     <img class="dynamic" src="<?= $row['url'] ?>" />
                                 </a>
                             </div>
-                        </div>
+                        
                 <?php
                         }
                     }
